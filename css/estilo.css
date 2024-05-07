@@ -1,0 +1,63 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('') format('truetype');
+  }
+
+#cabeca {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px; 
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nome-site {
+    color: white;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif ;
+    padding: 0;
+    margin: 0;
+    margin-left: 35px; 
+}
+.logo-link {
+    margin-left: 600px;
+    margin-right: auto; 
+    
+}
+.logo-link img {
+    width: 70px; 
+    height: auto; 
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 60px; /* Margem para alinhar a navbar à direita */
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar li {
+    display: inline-block;
+    margin-left: 20px; /* Espaçamento entre os itens da navbar */
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative; 
+}
+.navbar a:hover {
+    background-color:  red; 
+    border-radius: 10%;
+    padding: 5px;
+}
