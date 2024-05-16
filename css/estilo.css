@@ -2,74 +2,82 @@ body, html {
     margin: 0;
     padding: 0;
     height: auto;
-    /*border: 1px solid red; */  
+    /*border: 1px solid red;   */
 }
+
 @font-face {
     font-family: 'Flamengo-font';
-    src: url('Flamengo\ 2021.ttf') format('truetype');
-  }
+    src: url('The Flamengo-Display.ttf') format('truetype');
+}
 
-  @font-face {
+@font-face {
     font-family: 'Barimhare';
-    src: url('The\ Barimhare.ttf') format('truetype');
-  }
+    src: url('The Barimhare.ttf') format('truetype');
+}
 
 #cabeca {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 110px; 
+    height: 110px;
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nome-site {
     color: white;
     font-size: xx-large;
     font-family: 'Flamengo-font';
     padding: 0;
     margin: 0;
-    margin-left: 35px; 
+    margin-left: 35px;
 }
+
 .logo-link {
     margin-left: 600px;
-    margin-right: auto; 
-    
+    margin-right: auto;
 }
+
 .logo-link img {
-    width: 70px; 
-    height: auto; 
+    width: 70px;
+    height: auto;
 }
+
 .navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 60px; 
+    margin-right: 60px;
     font-family: 'Flamengo-font';
 }
+
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 .navbar li {
     display: inline-block;
-    margin-left: 20px; 
+    margin-left: 20px;
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    position: relative; 
+    position: relative;
 }
+
 .navbar a:hover {
-    background-color:  red; 
+    background-color: red;
     border-radius: 10%;
     padding: 5px;
 }
 
-.container-fluid{
+.container-fluid {
     margin-top: 0;
     margin-bottom: 0;
     border: 0.5px solid rgb(59, 59, 59);
@@ -77,31 +85,32 @@ body, html {
     height: 85%;
     background-color: rgba(209, 209, 209, 0.993);
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.301);
-
 }
+
 .content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 20px; 
+    grid-template-columns: 1fr auto;
+    gap: 20px;
 }
 
-.cc{
+.cc {
     border: 5px double rgba(255, 255, 255, 0.829);
     width: 820px;
     height: 617px;
-    margin-top: 20px;
-    margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 330px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
 }
+
 .map {
-    border: 5px double rgba(255, 0, 0, 0.829);   
+    border: 5px double rgba(255, 0, 0, 0.829);
     width: 480px;
     height: 400px;
     margin-top: 90px;
     margin-right: 70px;
     padding-left: 15px;
     position: relative;
-    background-color:  rgba(209, 209, 209, 0.993);
+    background-color: rgba(209, 209, 209, 0.993);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
 }
 
@@ -113,23 +122,60 @@ body, html {
     height: 100%;
 }
 
-.informacoes{
-    border: 5px groove rgba(0, 0, 0, 0.575); 
+.infocont {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.informacoes {
+    border: 5px double rgba(0, 0, 0, 0.829);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
-    width: 750px;
-    height: 550px;
-    margin-top: 20px;
-    margin-left: 60px;
+    width: 800px;
+    height: 850px;
+    margin-top: 30px;
+    margin-left: 30px;
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.589);
 }
 
-.info{
+.info {
     padding-top: 3px;
-    padding-bottom: 3px;
+    padding-bottom: 0px;
     padding-left: 5px;
     padding-right: 5px;
-    font-size: smaller;
+    font-size: medium;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.side-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 480px;
+    height: auto;
+    margin-top: 120px;
+    margin-right: 70px;
+}
+
+.video {
+    border: 5px double rgba(0, 0, 0, 0.829);
+    width: 510px;
+    height: 430px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+}
+
+.contato {
+    border: 5px double rgba(255, 0, 0, 0.829);
+    width: 320px;
+    height: 100px;
+    background-color: rgba(255, 29, 29, 0.589);
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+}
