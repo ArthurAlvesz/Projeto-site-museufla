@@ -1,3 +1,4 @@
+/*----------Configuracao padrao das paginas---------*/
 body, html {
     margin: 0;
     padding: 0;
@@ -90,28 +91,6 @@ body, html {
     padding: 7px;
 }
 
-#paragrafos{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
-    width: 90%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 15px;
-    border: 5px double rgba(0, 0, 0, 0.829);
-    padding-bottom: 8px;
-    border-radius: 11px;
-}
-
-.imagens{
-    border: 5px double rgba(0, 0, 0, 0.829);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
-    width: 400px;
-    height: 310px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .rodape{
     width: 100%;
     height: 400px;
@@ -133,5 +112,26 @@ body, html {
     height: auto;
 }
 
+/*----------Configuracao individual da pagina---------*/
 
+#paragrafos{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border: 5px double rgba(0, 0, 0, 0.829);
+    padding-bottom: 8px;
+    border-radius: 11px;
+}
 
+.imagens{
+    border: 5px double rgba(0, 0, 0, 0.829);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.301);
+    width: 400px;
+    height: 310px;
+    margin-left: auto;
+    margin-right: auto;
+}

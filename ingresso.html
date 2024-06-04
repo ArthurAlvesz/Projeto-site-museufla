@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Agendamento Concluído</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/ingresso.css">
+</head>
+
+<body>
+
+<!-- Cabecalho da pagina -->
+    <div id="cabeca">
+        <div class="nome-site">
+            <p>Museu do <b style="color: red;">Flamengo</b></p>
+        </div>
+        <div class="logo-link">
+            <a href="https://www.flamengo.com.br/"><img src="https://imagepng.org/crf-do-flamengo/crf-flamengo-9/" alt="logo-fla"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crf.html">CRF</a></li>
+                <li><a href="gavea.html">Gávea</a></li>
+                <li><a href="https://www.youtube.com/@flamengo">FlaTV</a></li>
+                <li><a href="formulario.html">Agendamento</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+<!-- Escopo principal do card ingresso apresentando os elementos preenchidos pelo usuario e apresentando o qr code do ingresso --> 
+    <div class="container-fluid">
+        <div class="card">
+            <h2 style="font-family: Flamengo-font;">Dados do Agendamento</h2>
+            <p><strong>Nome:</strong> <span id="cardNome"></span></p>
+            <p><strong>CPF:</strong> <span id="cardCpf"></span></p>
+            <p><strong>Data de Nascimento:</strong> <span id="cardDataNascimento"></span></p>
+            <p><strong>Tipo de Ingresso:</strong> <span id="cardTipoIngresso"></span></p>
+            <p><strong>Quantidade de Ingressos:</strong> <span id="cardQuantidadeIngressos"></span></p>
+            <p><strong>Data da Visita:</strong> <span id="cardDataEvento"></span></p>
+            <p><strong>Email:</strong> <span id="cardEmail"></span></p>
+            <div class="qr-code" id="qrCode">
+                <canvas id="qrCodeCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+<!-- Rodape da pagina -->
+    <div class="rodape">    
+        <img src="https://museuflamengo.com/patrocinio.png">
+    </div>
+    <div style="background-color: black; color: white; text-align: center;">
+        Todos os direitos reservados® (Desenvolvido por Arthur Alves)
+    </div>
+
+<!-- Codigo JavaScript de captura de dados do formulario com o intuito de gerar o 'ingresso' juntamente com um qr code aleatorio -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const formData = JSON.parse(localStorage.getItem('formData'));
+        if (formData) {
+            document.getElementById('cardNome').textContent = formData.nome;
+            document.getElementById('cardCpf').textContent = formData.cpf;
+            document.getElementById('cardDataNascimento').textContent = formData.dataNascimento;
+            document.getElementById('cardTipoIngresso').textContent = formData.tipoIngresso;
+            document.getElementById('cardQuantidadeIngressos').textContent = formData.quantidadeIngressos;
+            document.getElementById('cardDataEvento').textContent = formData.dataEvento;
+            document.getElementById('cardEmail').textContent = formData.email;
+            document.getElementById('cardEndereco').textContent = formData.endereco;
+
+            // Generate QR code
+            const qrContent = `
+                Nome: ${formData.nome}
+                CPF: ${formData.cpf}
+                Data de Nascimento: ${formData.dataNascimento}
+                Tipo de Ingresso: ${formData.tipoIngresso}
+                Quantidade de Ingressos: ${formData.quantidadeIngressos}
+                Data do Evento: ${formData.dataEvento}
+                Email: ${formData.email}
+                Endereço: ${formData.endereco}
+            `;
+
+            QRCode.toCanvas(document.getElementById('qrCodeCanvas'), qrContent, function (error) {
+                if (error) console.error(error);
+                console.log('QR code generated!');
+            });
+        }
+    });
+</script>
+</body>
+</html>
