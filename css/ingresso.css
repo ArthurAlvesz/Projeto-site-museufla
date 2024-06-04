@@ -83,11 +83,8 @@ body, html {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    border: 0.5px solid rgb(255, 255, 255);
     width: 1300px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.993);
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.301);
     padding: 7px;
 }
 
@@ -116,11 +113,13 @@ body, html {
 .card {
     max-width: 500px;
     margin: 20px auto;
+    height: 500px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 5px double #ccc;
     border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.466);
+    background-color: #800000;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    color: white;
 }
 .card h2 {
     text-align: center;
@@ -132,8 +131,11 @@ body, html {
 }
 .qr-code {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 155px;
+    margin-right: auto;
+    width: 170px;
+    height: 100px;
+    padding-top: 5px;
 }
-#qrCodeCanvas {
-    margin-top: 20px;
-}
+
